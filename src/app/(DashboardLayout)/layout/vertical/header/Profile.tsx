@@ -25,11 +25,11 @@ const Profile = () => {
       >
         <Dropdown.Item
           as={Link}
-          href="#"
+          href="/profile"
           className="px-3 py-3 flex items-center bg-hover group/link w-full gap-3 text-dark"
         >
-          <Icon icon="solar:settings-linear" height={20} />
-          Settings
+          <Icon icon="solar:document-add-linear" height={20} />
+          Profile Info
         </Dropdown.Item>
         <div className="p-3 pt-0">
         <Button as={Link}  size={'sm'}  href="/auth/login" className="mt-2 border border-primary text-primary bg-transparent hover:bg-lightprimary outline-none focus:outline-none">Logout</Button>
