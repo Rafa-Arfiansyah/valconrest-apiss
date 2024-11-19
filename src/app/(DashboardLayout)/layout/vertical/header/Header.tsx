@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Badge, Button, Navbar } from "flowbite-react";
 import { Icon } from "@iconify/react";
 import Profile from "./Profile";
-import Notification from "./notification";
 import FullLogo from "../../shared/logo/FullLogo";
 import { Drawer } from "flowbite-react";
 import MobileSidebar from "../sidebar/MobileSidebar";
@@ -53,7 +52,6 @@ const Header = () => {
               >
                 <Icon icon="solar:hamburger-menu-line-duotone" height={21} />
               </span>
-              <Notification />
             </div>
 
             <div className="flex gap-4 items-center">
