@@ -3,7 +3,7 @@ import { Card } from "flowbite-react";
 import Image from "next/image";
 import profile1 from "/public/images/profile/user-3.webp";
 import profile2 from "/public/images/profile/user-8.jpeg";
-import stackoverflow from "/public/images/profile/stacks.jpeg";
+import stackoverflow from "/public/images/profile/Stacks.jpeg";
 
 const DeveloperInfo = () => {
   const developers = [
