@@ -10,8 +10,8 @@ const ProfilePage = () => {
   const [isCopied, setIsCopied] = useState(false);
   
   const user = {
-    name: "Vynaa Valerie",
-    email: "vynaa@valconrest.my.id",
+    name: "Rafa Arfiansyah Raif",
+    email: "itsme@rafanokoto.my.id",
     apiKey: "sk_test_51NY8kh2eZKH6N8k9X2eZvN",
     role: "Developer",
     profileUrl: user1, 
