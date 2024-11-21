@@ -10,13 +10,13 @@ import Link from "next/link";
 const page = () => {
   return (
     <>
-      <div className="grid grid-cols-12 gap-30">
+      <div className="grid grid-cols-12 gap-3 md:gap-4">
         {/* First Row */}
         <div className="lg:col-span-8 col-span-12">
           <FavAPIs />
         </div>
         <div className="lg:col-span-4 col-span-12">
-          <div className="grid grid-cols-12 gap-30">
+          <div className="grid grid-cols-12 gap-3">
             <div className="col-span-12">
               <ApiStatus />
             </div>
@@ -40,8 +40,8 @@ const page = () => {
         </div>
 
         {/* Footer */}
-        <div className="col-span-12 text-center mt-6">
-          <p className="text-base">
+        <div className="col-span-12 text-center mt-4">
+          <p className="text-sm">
             Developed by{" "}
             <Link
               href="#"
