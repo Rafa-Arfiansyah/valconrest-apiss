@@ -11,19 +11,13 @@ const DeveloperInfo = () => {
       name: "Rafa Arfiansyah",
       role: "Lead Developer",
       image: profile1,
-      github: "github.com/rafaarfiansyah",
-    },
-    {
-      name: "Vynaa Valerie",
-      role: "Api Mainteiner",
-      image: profile2,
-      github: "github.com/vynaavalerie",
+      github: "github.com/Rafa-Arfiansyah",
     },
     {
       name: "Stack Overflow",
-      role: "helper",
+      role: "Helper",
       image: stackoverflow,
-      github: "github.com/vynaavalerie",
+      github: "stackoverflow.com/",
     },
   ];
 
