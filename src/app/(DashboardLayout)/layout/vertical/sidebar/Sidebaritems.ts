@@ -1,114 +1,93 @@
 export interface ChildItem {
-  id?: number | string;
-  name?: string;
-  icon?: any;
-  children?: ChildItem[];
-  item?: any;
-  url?: any;
-  color?: string;
+  id?: number | string
+  name?: string
+  icon?: any
+  children?: ChildItem[]
+  item?: any
+  url?: any
+  color?: string
 }
-
 export interface MenuItem {
-  heading?: string;
-  name?: string;
-  icon?: any;
-  id?: number;
-  to?: string;
-  items?: MenuItem[];
-  children?: ChildItem[];
-  url?: any;
+  heading?: string
+  name?: string
+  icon?: any
+  id?: number
+  to?: string
+  items?: MenuItem[]
+  children?: ChildItem[]
+  url?: any
 }
-
-import { uniqueId } from "lodash";
-
+import { uniqueId } from 'lodash'
 const SidebarContent: MenuItem[] = [
   {
-    heading: "HOME",
+    heading: 'HOME',
     children: [
       {
-        name: "Dashboard",
-        icon: "hugeicons:home-04",
+        name: 'Dashboard',
+        icon: 'hugeicons:home-04',
         id: uniqueId(),
-        url: "/",
+        url: '/'
       },
       {
-        name: "Pricing",
-        icon: "hugeicons:money-receive-circle",
+        name: 'Pricing',
+        icon: 'hugeicons:money-receive-circle',
         id: uniqueId(),
-        url: "/pricing",
-      },
-    ],
+        url: '/pricing'
+      }
+    ]
   },
   {
-    heading: "RestFul APIs",
+    heading: 'RestFul APIs',
     children: [
       {
-        name: "Artificial Intelligence",
-        icon: "hugeicons:ai-brain-05",
+        name: 'Artificial Intelligence',
+        icon: 'hugeicons:ai-brain-05',
         id: uniqueId(),
-        url: "/restful/ai",
+        url: '/restful/ai'
       },
       {
-        name: "Anime",
-        icon: "hugeicons:star-face",
+        name: 'Anime',
+        icon: 'hugeicons:star-face',
         id: uniqueId(),
-        url: "/restful/anime",
+        url: '/restful/anime'
       },
       {
-        name: "Downloader",
-        icon: "hugeicons:file-download",
+        name: 'Downloader',
+        icon: 'hugeicons:file-download',
         id: uniqueId(),
-        url: "/restful/downloader",
+        url: '/restful/downloader'
       },
       {
-        name: "Tools",
-        icon: "hugeicons:pen-tool-03",
+        name: 'Tools',
+        icon: 'hugeicons:pen-tool-03',
         id: uniqueId(),
-        url: "/restful/restful/tools",
+        url: '/restful/tools'
       },
       {
-        name: "Islamic",
-        icon: "hugeicons:the-prophets-mosque",
+        name: 'Islamic',
+        icon: 'hugeicons:the-prophets-mosque',
         id: uniqueId(),
-        url: "/restful/islamic",
+        url: '/restful/islamic'
       },
       {
-        name: "Game",
-        icon: "hugeicons:gameboy",
+        name: 'Game',
+        icon: 'hugeicons:gameboy',
         id: uniqueId(),
-        url: "/restful/game",
+        url: '/restful/game'
       },
       {
-        name: "Fun",
-        icon: "hugeicons:laughing",
+        name: 'Fun',
+        icon: 'hugeicons:laughing',
         id: uniqueId(),
-        url: "/restful/fun",
+        url: '/restful/fun'
       },
       {
-        name: "Primbon",
-        icon: "hugeicons:stars",
+        name: 'Primbon',
+        icon: 'hugeicons:stars',
         id: uniqueId(),
-        url: "/restful/primbon",
-      },
-    ],
-  },
-  {
-    heading: "AUTH",
-    children: [
-      {
-        name: "Login",
-        icon: "hugeicons:login-03",
-        id: uniqueId(),
-        url: "/auth/login",
-      },
-      {
-        name: "Register",
-        icon: "hugeicons:download-02", 
-        id: uniqueId(),
-        url: "/auth/register",
-      },
-    ],
-  },
-];
-
-export default SidebarContent;
+        url: '/restful/primbon'
+      }
+    ]
+  }
+]
+export default SidebarContent
