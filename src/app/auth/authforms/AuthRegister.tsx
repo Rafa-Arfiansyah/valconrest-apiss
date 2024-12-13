@@ -19,26 +19,27 @@ const AuthRegister = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5050/register', {
-        username,
-        email,
-        password
-      }, {
-        headers: {
-          'Content-Type': 'application/json'
+      // Kirim data registrasi ke backend
+      const response = await axios.post(
+        "/api/auth/register", // Endpoint backend
+        { username, email, password },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
-      });
+      );
 
+      // Periksa apakah registrasi berhasil
       if (response.data.message === "User registered successfully") {
-        // Clear form
+        // Bersihkan form
         setUsername("");
         setEmail("");
         setPassword("");
-        
-        // Redirect to login page
-        router.push('/auth/login');
-      }
 
+        // Arahkan ke halaman login
+        router.push("/auth/login");
+      }
     } catch (err) {
       if (axios.isAxiosError(err)) {
         const axiosError = err as AxiosError<{ error?: string }>;
@@ -48,7 +49,7 @@ const AuthRegister = () => {
           setError("An error occurred during registration. Please try again.");
         }
       } else {
-        setError("An unexpected error occurred");
+        setError("An unexpected error occurred.");
       }
     } finally {
       setIsLoading(false);
@@ -62,6 +63,7 @@ const AuthRegister = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>
+        {/* Input Username */}
         <div className="mb-4">
           <div className="mb-2 block">
             <Label htmlFor="name" value="Name" />
@@ -78,6 +80,8 @@ const AuthRegister = () => {
             disabled={isLoading}
           />
         </div>
+
+        {/* Input Email */}
         <div className="mb-4">
           <div className="mb-2 block">
             <Label htmlFor="emadd" value="Email Address" />
@@ -94,6 +98,8 @@ const AuthRegister = () => {
             disabled={isLoading}
           />
         </div>
+
+        {/* Input Password */}
         <div className="mb-6">
           <div className="mb-2 block">
             <Label htmlFor="userpwd" value="Password" />
@@ -110,11 +116,15 @@ const AuthRegister = () => {
             disabled={isLoading}
           />
         </div>
+
+        {/* Error Message */}
         {error && (
           <div className="text-red-500 text-sm p-2 bg-red-50 rounded-md mb-4">
             {error}
           </div>
         )}
+
+        {/* Submit Button */}
         <Button
           type="submit"
           color="primary"

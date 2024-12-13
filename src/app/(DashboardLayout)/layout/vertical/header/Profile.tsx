@@ -1,12 +1,20 @@
 import { Button, Dropdown } from "flowbite-react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/navigation";
 
 const Profile = () => {
   const router = useRouter();
-  const token = localStorage.getItem('token');
+  const [token, setToken] = useState<string | null>(null);
+
+  // Memastikan penggunaan localStorage hanya di sisi klien
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedToken = localStorage.getItem('accessToken');
+      setToken(storedToken);
+    }
+  }, []);
 
   // Function to handle redirection if user is not logged in
   const handleProfileInfoClick = () => {
@@ -19,7 +27,7 @@ const Profile = () => {
 
   // Logout function
   const handleLogout = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem('accessToken');
     localStorage.removeItem('username');
     localStorage.removeItem('email');
     localStorage.removeItem('apiKey');
