@@ -8,6 +8,10 @@ const UserSchema = new mongoose.Schema(
     password: { type: String, required: true },
     isPremium: { type: Boolean, default: false },
     premiumExpiresAt: { type: Date, default: null },
+    profilePicture: { 
+      type: String, 
+      default: '/public/images/profile/user-1.gif' // Default profile picture
+    },
     role: { type: String, enum: ["user", "admin"], default: "user" },
   },
   { timestamps: true }

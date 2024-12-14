@@ -1,6 +1,6 @@
 import { connectToDatabase } from "@/lib/mongodb";
-import User from "/src/models/User";
-import { authenticate } from "/src/middleware/auth";
+import User from "@/models/User";
+import { authenticate } from "@/middlewares/auth";
 
 export default async function handler(req, res) {
   authenticate(req, res, async () => {
