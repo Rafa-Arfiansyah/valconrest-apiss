@@ -1,5 +1,5 @@
 import { connectToDatabase } from "/src/lib/mongodb";
-import User from "/src/models/User";
+import User from "/src/models/user";
 import jwt from "jsonwebtoken";
 
 const createAccessToken = (user) => {
