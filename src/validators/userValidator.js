@@ -1,5 +1,5 @@
 import { connectToDatabase } from "@/lib/mongodb";
-import User from "@/models/User";
+import User from "@/models/user";
 
 /**
  * Validasi apakah username terdaftar di database dan return data user.
